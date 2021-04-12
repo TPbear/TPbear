@@ -1,0 +1,32 @@
+<?php 
+include 'manager/PostManager.class.php';
+include 'manager/conn.php';
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      $title=$_POST['title'];
+      $content=$_POST['content'];
+      $UserManager=new PostManager();
+      $type=$UserManager->posts($title,$content);
+}
+ ?>
+ <!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="utf-8" />
+<title>add</title>	
+
+</head>
+<body background = "bg2.jpg"> 	
+<div>
+<div style="text-align: center;">
+<form  method="post">
+<h1>NEW ELEMENT</h1>
+&nbsp&nbsp&nbsp&nbsp&nbsptitle：<input type="text" name="title"/>	<br><br>
+content：
+<textarea name="content" style="width:170px;height: 60px"></textarea> <br>  <br>        
+<input type="submit" value="submit"/>
+					
+				
+      			 </form>
+      	</div>
+      </div>
+</body>

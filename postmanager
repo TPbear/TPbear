@@ -1,0 +1,30 @@
+<?php 
+include 'conn.php';
+class PostManager
+{
+	public $counter;
+	function __construct(){
+		session_start();
+		
+		$post=isset($_SESSION['post'])?$_SESSION['post']:[];
+		$this->counter=isset($_SESSION['counter'])?$_SESSION['counter']:0;
+	}
+	function posts($title,$content){
+		include 'conn.php';
+		$article=['counter'=>$this->counter+1,'title'=>$title,'content'=>$content];
+		$_SESSION['post'][]=$article;
+		$sql="insert into article(title,content) value('{$title}','{$content}')";
+		$r=mysqli_query($conn,$sql);
+		if($r){
+			  echo "<script>alert('success');</script>";
+			  echo "<script>location.href='postList.php'</script>";
+		}
+	}
+
+
+}
+
+
+
+
+ ?>

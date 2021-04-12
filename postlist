@@ -1,0 +1,99 @@
+<?php
+session_start();
+$arr=isset($_SESSION['post'])?$_SESSION['post']:[];
+?>
+<nav>
+    <div>
+    <div>
+        <a></a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+           
+           
+<div>
+	<div>
+		<div align = "center"><img src="logo.jpg" width="550" height="400" ><div>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+			<thead>
+			<tr>
+			
+			</tr>
+				<tr>
+					
+					<td align="center" bgcolor="#FFFFFF">title</td>
+					<td align="center" bgcolor="#FFFFFF">content</td>
+					
+				</tr>
+			</thead>
+		<tbody>
+			<?php
+			
+
+				foreach ($arr as $key => $v) {
+					# code...
+				
+					echo '<tr>';
+				
+					echo '<td align="center" bgcolor="#FFFFFF">'.$v['title'].'</td>';
+					echo '<td align="center" bgcolor="#FFFFFF">'.$v['content'].'</td>';
+					
+						
+					
+					
+					echo '</tr>';
+				}
+				?>
+		<tbody>
+		</table>	
+			</div>
+			</div><?php
+session_start();
+$arr=isset($_SESSION['post'])?$_SESSION['post']:[];
+?>
+<nav>
+    <div>
+    <div>
+        <a></a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+           
+           
+<div>
+	<div>
+		<div align = "center"><img src="logo.jpg" width="550" height="400" ><div>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+			<thead>
+			<tr>
+			
+			</tr>
+				<tr>
+					
+					<td align="center" bgcolor="#FFFFFF">title</td>
+					<td align="center" bgcolor="#FFFFFF">content</td>
+					
+				</tr>
+			</thead>
+		<tbody>
+			<?php
+			
+
+				foreach ($arr as $key => $v) {
+					# code...
+				
+					echo '<tr>';
+				
+					echo '<td align="center" bgcolor="#FFFFFF">'.$v['title'].'</td>';
+					echo '<td align="center" bgcolor="#FFFFFF">'.$v['content'].'</td>';
+					
+						
+					
+					
+					echo '</tr>';
+				}
+				?>
+		<tbody>
+		</table>	
+			</div>
+			</div>
